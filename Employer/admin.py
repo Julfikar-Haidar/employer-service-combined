@@ -3,8 +3,8 @@ from django.contrib import admin
 from .models import (
     Contact,
     CompanyInfo,
-    IndustryTypeMaster,
-    IndustryTypeSlave,
+    IndustryTypeMain,
+    IndustryTypeSubordinate,
     Division,
     District,
     Thana,
@@ -33,15 +33,15 @@ class CompanyInfoAdmin(admin.ModelAdmin):
     list_display = ['name', 'b_name', 'thana', 'address', 'business_description', 'user']
 
 
-# industry type master table
-@admin.register(IndustryTypeMaster)
-class IndustrytypemasterAdmin(admin.ModelAdmin):
+# industry type main table
+@admin.register(IndustryTypeMain)
+class IndustrytypemainAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
-# IndustryTypeSlave table
-@admin.register(IndustryTypeSlave)
-class IndustrytypeslaveAdmin(admin.ModelAdmin):
+# IndustryTypeSubordinate table
+@admin.register(IndustryTypeSubordinate)
+class IndustrytypesubordinateAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
